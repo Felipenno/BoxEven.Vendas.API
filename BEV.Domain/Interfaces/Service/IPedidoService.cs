@@ -1,10 +1,6 @@
 ﻿using BEV.Domain.Entities;
 using BEV.Domain.Enum;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Timers;
 
 namespace BEV.Domain.Interfaces.Service
 {
@@ -12,7 +8,8 @@ namespace BEV.Domain.Interfaces.Service
     {
         Task<List<Pedido>> ListarNovosPedidosAsync();
         Task<List<Pedido>> ListarPedidosPorFiltroAsync(StatusPedido status, DateTime conclusao);
-        Task GerarPedidosAsync();
-        Task<bool> AlterarStatusPedidoAsync(int pedidoId);
+        Task GerarPedidosAsync(object source, ElapsedEventArgs e);
+        Task AlterarStatusPedidoAsync(string id, StatusPedido status);
+        
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BEV.Domain.Entities;
+﻿namespace BEV.Domain.Entities;
 
 public class Produto
 {
@@ -18,8 +12,37 @@ public class Produto
     public string? CodigoBarras { get; private set; }
     public DateTime? Criacao { get; private set; }
     public DateTime? Atualizacao { get; private set; }
-    public int? UnidadeMedidaId { get; private set; }
     public UnidadeMedida? UnidadeMedida { get; private set; }
 
     public List<Localizacao>? Localizacoes { get; private set; }
+
+    public Produto(int produtoId, bool? ativo, int? quantidade, decimal? preco, string? nome, string? imagemTipo, string? imagemNome, string? codigoBarras, DateTime? criacao, DateTime? atualizacao, UnidadeMedida? unidadeMedida, List<Localizacao>? localizacoes)
+    {
+        ProdutoId = produtoId;
+        Ativo = ativo;
+        Quantidade = quantidade;
+        Preco = preco;
+        Nome = nome;
+        ImagemTipo = imagemTipo;
+        ImagemNome = imagemNome;
+        CodigoBarras = codigoBarras;
+        Criacao = criacao;
+        Atualizacao = atualizacao;
+        UnidadeMedida = unidadeMedida;
+        Localizacoes = localizacoes;
+    }
+
+    public Produto(int produtoId, bool? ativo, int? quantidade, decimal? preco, string? nome, string? imagemTipo, string? imagemNome, string? codigoBarras, DateTime? criacao, DateTime? atualizacao)
+    {
+        ProdutoId = produtoId;
+        Ativo = ativo;
+        Quantidade = quantidade;
+        Preco = preco;
+        Nome = nome;
+        ImagemTipo = imagemTipo;
+        ImagemNome = imagemNome;
+        CodigoBarras = codigoBarras;
+        Criacao = criacao;
+        Atualizacao = atualizacao;
+    }
 }

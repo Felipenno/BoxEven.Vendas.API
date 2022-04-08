@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BEV.Domain.Entities;
+﻿namespace BEV.Domain.Entities;
 
 public class Localizacao
 {
@@ -14,6 +8,14 @@ public class Localizacao
     public char Lado { get; private set; }
     public int Prateleira { get; private set; }
     public int Vao { get; private set; }
-    public int? ProdutoId { get; private set; }
-    public Produto? Produto { get; private set; }
+
+    public Localizacao(int localizacaoId, string andar, int corredor, char lado, int prateleira, int vao)
+    {
+        LocalizacaoId = localizacaoId;
+        Andar = andar;
+        Corredor = corredor;
+        Lado = lado;
+        Prateleira = prateleira;
+        Vao = vao;
+    }
 }

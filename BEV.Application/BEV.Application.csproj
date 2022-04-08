@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BEV.Domain\BEV.Domain.csproj" />
+    <ProjectReference Include="..\BEV.Infra\BEV.Infra.csproj" />
+    <ProjectReference Include="..\BEV.Service\BEV.Service.csproj" />
   </ItemGroup>
 
 </Project>

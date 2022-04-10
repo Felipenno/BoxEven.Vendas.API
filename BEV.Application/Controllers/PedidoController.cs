@@ -34,7 +34,7 @@ public class PedidoController : ControllerBase
     }
 
     [HttpGet("filtro")]
-    public async Task<IActionResult> ListarPedidosPorFiltroAsync(StatusPedido status, DateTime conclusao)
+    public async Task<IActionResult> ListarPedidosPorFiltroAsync([FromQuery] StatusPedido status,[FromQuery] DateTime conclusao)
     {
         try
         {
@@ -48,12 +48,12 @@ public class PedidoController : ControllerBase
         }
     }
 
-    [HttpPut]
-    public async Task<IActionResult> AlterarStatusPedidoAsync(string id, StatusPedido status)
+    [HttpPatch("{id}")]
+    public async Task<IActionResult> AlterarStatusPedidoAsync([FromRoute] string id, [FromBody] StatusPedido status)
     {
         try
         {
-            if(id == null || status < 0)
+            if(string.IsNullOrEmpty(id) || status < 0)
             {
                 return BadRequest("Dados Inválidos");
             } 

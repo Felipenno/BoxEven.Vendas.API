@@ -3,16 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{074E3881-6E5D-420F-96E8-3AEC6F0D34EA}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{B06BE3E4-BAB2-45EF-B1F7-85F854B069CC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Service", "3 - Service", "{43F4EFD9-44C5-48B5-8A18-8E63F8A3D8CB}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{5B9EAB66-9E1C-4F91-B253-B38871955C76}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Test", "5 - Test", "{DE69CD6B-C770-446E-84BB-8CF46D6F5C2F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEV.Application", "BEV.Application\BEV.Application.csproj", "{31252222-3846-4338-B8B5-A82A26DCB401}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEV.Domain", "BEV.Domain\BEV.Domain.csproj", "{82786DA8-F0E1-47FD-8D32-BB9B462AD450}"

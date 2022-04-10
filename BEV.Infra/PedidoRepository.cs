@@ -80,14 +80,20 @@ public class PedidoRepository : IPedidoRepository
 
             var resultado = await conexao.QueryAsync<Produto, UnidadeMedida, Localizacao, Produto>(query, (pr, um, ll) =>
             {
-                if (produto == null || produto.ProdutoId != pr.ProdutoId)
+                 if (produto == null || produto.ProdutoId != pr.ProdutoId)
                 {
                     produto = new Produto(pr.ProdutoId, pr.Ativo, pr.Quantidade, pr.Preco, pr.Nome, pr.ImagemTipo, pr.ImagemNome, pr.CodigoBarras, pr.Criacao, pr.Atualizacao, um, new List<Localizacao>());
-                    produto.Localizacoes.Add(ll);
+                     if (ll != null)
+                    {
+                        produto.Localizacoes.Add(ll);
+                    }
                 }
                 else
                 {
-                    produto.Localizacoes.Add(ll);
+                     if (ll != null)
+                    {
+                        produto.Localizacoes.Add(ll);
+                    }
                 }
 
                 return produto;

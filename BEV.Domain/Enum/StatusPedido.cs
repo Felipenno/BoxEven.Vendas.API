@@ -2,7 +2,7 @@
 
 public enum StatusPedido
 {
-    Novo,
-    Concluido,
-    Cancelado
+    Novo = 1,
+    Concluido = 2,
+    Cancelado = 3
 }

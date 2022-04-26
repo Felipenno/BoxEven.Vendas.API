@@ -45,4 +45,11 @@ public class Produto
         Criacao = criacao;
         Atualizacao = atualizacao;
     }
+
+    public void DefinirQuantidadeAleatorioPedido()
+    {
+        var quantidade = new Random().Next(1, Quantidade.Value);
+
+        Quantidade = quantidade;
+    }
 }

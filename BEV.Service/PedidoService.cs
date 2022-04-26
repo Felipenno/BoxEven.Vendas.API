@@ -37,6 +37,8 @@ public class PedidoService : IPedidoService
             produtosSelecionados.Add(produtos[produtoIndex]);
         }
 
+        produtosSelecionados.ForEach(p => p.DefinirQuantidadeAleatorioPedido());
+
         var pedino = new Pedido(GerarNumeroAleatorio(), GerarNomeVendedorAleatorio(), StatusPedido.Novo, DateTime.Now, produtosSelecionados);
 
         await _pedidoRepository.InserirPedidoAsync(pedino);
